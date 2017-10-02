@@ -21,7 +21,7 @@ resource "ibmcloud_infra_ssh_key" "ssh_key" {
   label = "${var.key_label}"
   notes = "${var.key_note}"
   # Public key, so this is completely safe
-  public_key = "${var.public_key}"
+  public_key = "$SCHEMATICS.SSHKEYPUBLIC"
 }
 
 ##############################################################################
